@@ -1,7 +1,7 @@
 import React from "react";
+// import styled from "styled-components";
 
 const Menu = () => {
-  return <div>Menu123</div>;
+  return <div>The menu</div>;
 };
-
 export default Menu;
