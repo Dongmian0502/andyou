@@ -54,6 +54,7 @@ function App() {
                 <li>
                   <Link to="./menu">Menu</Link>
                 </li>
+
                 <li>
                   <Link to="./about">About</Link>
                 </li>
@@ -64,7 +65,7 @@ function App() {
               </ul>
             </div>
             <div>
-              <StyleSignInBtn>Sgin In</StyleSignInBtn>
+              <StyleSignInBtn>Sign In</StyleSignInBtn>
             </div>
           </div>
         </StyleNav>
@@ -88,11 +89,18 @@ const StyleHeader = styled.header`
 const StyleNav = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: 20px;
 
   .nav-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  a:link {
+    text-decoration: black;
+  }
+  a:visited {
+    color: black;
   }
   .search {
     cursor: pointer;
@@ -119,12 +127,20 @@ const StyleNav = styled.div`
   .nav ul li {
     padding: 10px 20px 10px 20px;
     cursor: pointer;
+    transition: all 0.3s;
   }
   .nav ul li:hover {
-    color: rgba(0, 0, 0, 0.8);
+    color: #fffde5;
+    background-color: #ffe4c4;
   }
+  /* .nav ul a:hover {
+    color: #fffde5;
+    background-color: #ffe4c4;
+    border-radius: 7px;
+  } */
   .headImg {
-    width: 100px;
+    width: 150px;
+    height: 100%;
   }
 `;
 const StyleSignInBtn = styled.button`
@@ -135,6 +151,10 @@ const StyleSignInBtn = styled.button`
   border-radius: 5px;
   cursor: pointer;
   outline: none;
+  transition: all 0.5s;
+  font-size: 15px;
+  font-weight: 500;
+
   &:hover {
     background-color: rgba(59, 120, 68, 0.3);
   }
