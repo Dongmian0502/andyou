@@ -1,6 +1,10 @@
 import React from "react";
 import "./App.css";
 import Logo from "/src/container/logo.PNG";
+import indexBG from "/src/container/indexBG.PNG";
+import snow3 from "/src/Image/snow/snow-3.png";
+import li3 from "/src/Image/li/li-3.png";
+import chian3 from "/src/Image/chian/chian-3.png";
 import styled from "styled-components";
 import About from "../About/About";
 import Menu from "../Menu/Menu";
@@ -10,12 +14,27 @@ import { HashRouter, Link, Route } from "react-router-dom";
 function Index() {
   return (
     <React.Fragment>
-      <div className="content-title">Let,s Get Drink</div>
-      <div className="content-text">
-        <div>Lorem 123 Jlfpsdlpfl lspdlfpdslfpds</div>
-        <div>Lorem 123 Jlfpsdlpfl lspdlfpdslfpds</div>
+      <div className="index">
+        <div className="content-title">Let,s Get Drink</div>
+        <div className="content-text">
+          <div>
+            {" "}
+            <h1>背景設定</h1>
+            <p>
+              作為棲息地被人類社會侵占的可憐鴞妖，為了求生存，三個同病相憐的鴞在人類社會中開了一間飲料店
+            </p>
+          </div>
+          <br />
+          <br />
+          <div>
+            <h1>設計概念</h1>
+            <p>
+              以貓頭鷹為主題，這是一場與三位融合日本ACG文化所創作之貓頭鷹化身的約會
+            </p>
+          </div>
+        </div>
+        {/* <StyleExBtn>example</StyleExBtn> */}
       </div>
-      <StyleExBtn>example</StyleExBtn>
     </React.Fragment>
   );
 }
@@ -28,63 +47,82 @@ function App() {
     setPathname(pn);
   }, []);
   return (
-    <HashRouter>
-      <StyleHeader>
-        <StyleNav>
-          <div>
-            <a href="/">
-              <img src={Logo} className="headImg" />
-            </a>
-          </div>
-          <div className="nav-list">
-            <div className="search">
-              <input
-                className={searchStart ? "open" : ""}
-                type="text"
-                placeholder="告訴我你想喝點什麼?"
-              />
-
-              <i
-                className="fa-solid fa-magnifying-glass"
-                onClick={() => setSearchStart(!searchStart)}
-              ></i>
-            </div>
-            <div className="nav">
-              <ul>
-                <li>
-                  <Link to="./menu">Menu</Link>
-                </li>
-
-                <li>
-                  <Link to="./about">About</Link>
-                </li>
-                <li>
-                  <Link to="./merch">Merch</Link>
-                </li>
-                <li>coming soon</li>
-              </ul>
-            </div>
+    <Background>
+      <div className="bg-snow" />
+      <div className="bg-chian" />
+      <div className="bg-li" />
+      <HashRouter>
+        <StyleHeader>
+          <StyleNav>
             <div>
-              <StyleSignInBtn>Sign In</StyleSignInBtn>
+              <a href="/">
+                <img src={Logo} className="headImg" />
+              </a>
             </div>
-          </div>
-        </StyleNav>
-        <StyleHeaderContent>
-          <Route exact path="/" component={Index} />
-          <Route exact path="/menu" component={Menu} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/merch" component={Merch} />
-        </StyleHeaderContent>
-      </StyleHeader>
-    </HashRouter>
+            <div className="nav-list">
+              <div className="search">
+                <input
+                  className={searchStart ? "open" : ""}
+                  type="text"
+                  placeholder="告訴我你想喝點什麼?"
+                />
+
+                <i
+                  className="fa-solid fa-magnifying-glass"
+                  onClick={() => setSearchStart(!searchStart)}
+                ></i>
+              </div>
+              <div className="nav">
+                <ul>
+                  <li>
+                    <Link to="./menu">Menu</Link>
+                  </li>
+
+                  <li>
+                    <Link to="./about">About</Link>
+                  </li>
+                  <li>
+                    <Link to="./merch">Merch</Link>
+                  </li>
+                  <li>coming soon</li>
+                </ul>
+              </div>
+              <div>
+                <StyleSignInBtn>Sign In</StyleSignInBtn>
+              </div>
+            </div>
+          </StyleNav>
+          <StyleHeaderContent>
+            <Route exact path="/" component={Index} />
+            <Route exact path="/menu" component={Menu} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/merch" component={Merch} />
+          </StyleHeaderContent>
+        </StyleHeader>
+      </HashRouter>
+    </Background>
   );
 }
 
 export default App;
-
+const Background = styled.div`
+  background-image: url(${snow3});
+  background-image: url(${chian3});
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size:contain; 
+  width: 100%;
+  height: 100%;
+  /* .li{  
+    background-image: url(${li3});
+    object-position:right;
+  } */
+`;
 const StyleHeader = styled.header`
-  padding: 60px;
-  background-color: #fffde5;
+  padding: 30px;
+  /* background-color: #fffde5; */
+  background-image: url("/src/container/indexBG");
 `;
 const StyleNav = styled.div`
   display: flex;
@@ -130,14 +168,11 @@ const StyleNav = styled.div`
     transition: all 0.3s;
   }
   .nav ul li:hover {
-    color: #fffde5;
     background-color: #ffe4c4;
+    a {
+      color: #fffde5;
+    }
   }
-  /* .nav ul a:hover {
-    color: #fffde5;
-    background-color: #ffe4c4;
-    border-radius: 7px;
-  } */
   .headImg {
     width: 150px;
     height: 100%;

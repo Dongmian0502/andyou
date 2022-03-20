@@ -15,6 +15,7 @@ const About = () => {
   return (
     <StyledRow>
       <div className="wraper">
+        {" "}
         <h1 className="h1">三位企業寶寶的介紹</h1>
         <div className="hero ">
           <div>
@@ -110,9 +111,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/*     <h2>設計概念</h2>
-        以貓頭鷹為主題，這是一場與三位融合日本ACG文化所創作之貓頭鷹化身的約會 */}
       </div>
       <div />
     </StyledRow>
