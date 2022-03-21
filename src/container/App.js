@@ -11,29 +11,50 @@ import Menu from "../Menu/Menu";
 import Merch from "../Merch/Merch";
 import { HashRouter, Link, Route } from "react-router-dom";
 
+const settings = {
+  className: "center",
+  centerMode: true,
+  infinite: true,
+  centerPadding: "50px",
+  // centerMargin: "20px",
+  slidesToShow: 2,
+  speed: 500
+};
+
 function Index() {
   return (
     <React.Fragment>
-      <div className="index">
-        <div className="content-title">Let,s Get Drink</div>
-        <div className="content-text">
-          <div>
-            {" "}
-            <h1>背景設定</h1>
-            <p>
-              作為棲息地被人類社會侵占的可憐鴞妖，為了求生存，三個同病相憐的鴞在人類社會中開了一間飲料店
-            </p>
+      <div className="container-index">
+        <div className="index">
+          <div className="app-h1-fix col-6">
+            <h1>
+              隨著我們逐漸長大,被步調繁忙的城市所同化,是否也
+              淡忘了當幻想過,自己能夠像是漫畫遊戲中的主人公一
+              樣,來場甜滋滋的戀愛?生活繁忙的你,不如暫時停下
+              腳步,進入貓頭鷹妖怪的世界裡,與他們一邊喝著可口
+              的飲料、一邊來場放鬆身心的甜蜜約會吧!{" "}
+            </h1>
           </div>
-          <br />
-          <br />
-          <div>
-            <h1>設計概念</h1>
-            <p>
-              以貓頭鷹為主題，這是一場與三位融合日本ACG文化所創作之貓頭鷹化身的約會
-            </p>
+          <div className="content-title">Let,s Get Drink</div>
+          <div className="content-text">
+            <div>
+              {" "}
+              <h1>背景設定</h1>
+              <p>
+                作為棲息地被人類社會侵占的可憐鴞妖，為了求生存，三個同病相憐的鴞在人類社會中開了一間飲料店
+              </p>
+            </div>
+            <br />
+            <br />
+            <div>
+              <h1>設計概念</h1>
+              <p>
+                以貓頭鷹為主題，這是一場與三位融合日本ACG文化所創作之貓頭鷹化身的約會
+              </p>
+            </div>
           </div>
+          {/* <StyleExBtn>example</StyleExBtn> */}
         </div>
-        {/* <StyleExBtn>example</StyleExBtn> */}
       </div>
     </React.Fragment>
   );

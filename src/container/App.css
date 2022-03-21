@@ -26,9 +26,28 @@
 .App-link {
   color: #61dafb;
 }
+.index {
+  display: inline-block;
+}
 .index h1 {
   margin-bottom: 20px;
 }
+.container-index {
+  max-width: 1920px;
+  display: inline-block;
+}
+.col-6 {
+  width: 50%;
+}
+.app-h1-fix {
+  font-weight: 400;
+  color: pink;
+  line-height: 38px;
+  float: right;
+}
+/* .app-h1-fix h1{
+  color: pink;  
+} */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
