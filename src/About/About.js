@@ -25,7 +25,7 @@ const About = () => {
               <img className="col-lg-4" src={li1} alt=""></img>
             </div>
             <p className="hr" />
-            <div className="container bg-snow img-hidden">
+            <div className="container-about bg-snow img-hidden">
               <div className="row ">
                 <div>
                   <img
@@ -57,12 +57,12 @@ const About = () => {
             </div>
           </div>{" "}
           <p className="hr" />
-          <div className="container bg-li img-hidden">
+          <div className="container-about bg-li img-hidden">
             <div className="row ">
               <div>
                 <img className="col-lg-6 float-right" src={li3} alt="" />
               </div>
-              <div className="col-lg-6 float-left text-fix">
+              <div className="col-lg-6-li float-left text-fix">
                 <h1>
                   梟翊的小檔案：
                   <h6>
@@ -84,7 +84,7 @@ const About = () => {
             </div>
           </div>
           <p className="hr" />{" "}
-          <div className="container bg-chian img-hidden">
+          <div className="container-about bg-chian img-hidden">
             <div className="row ">
               <div>
                 <img className="col-lg-6 float-left" src={chian3} alt="" />
@@ -158,10 +158,17 @@ const StyledRow = styled.div`
   .col-lg-4 {
     width: 33.333333%;
     object-fit: cover;
+    height: 100%;
   }
   .col-lg-6 {
     width: 50%;
     height: 100%;
+    object-fit: cover;
+  }
+  .col-lg-6-li {
+    width: 50%;
+    height: 100%;
+    padding: 28px;
     object-fit: cover;
   }
   .row {

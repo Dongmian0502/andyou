@@ -195,8 +195,12 @@ const StyleNav = styled.div`
     }
   }
   .headImg {
-    width: 150px;
+    /* width: 140px;
+    height: 88%;
+    padding-left:50px; */
+    width: 200px;
     height: 100%;
+    /* padding-left:50px; */
   }
 `;
 const StyleSignInBtn = styled.button`

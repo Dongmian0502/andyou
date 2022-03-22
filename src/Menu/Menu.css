@@ -16,11 +16,15 @@ img {
   height: 200px;
   width: 300px;
 }
-.container h1 {
+.container-menu h1 {
   display: flow-root;
   text-align: center;
   font-size: 80px;
+  font-weight: 500;
 }
 /* .container{
-  height:10%;
+  height:100%;
 } */
+.slick-track {
+  width: 10000px !important;
+}
